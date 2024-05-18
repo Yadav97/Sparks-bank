@@ -91,11 +91,11 @@ app.post("/transfer",async (req,res)=>{
 })
 
 
-const server = "http://localhost:8000"
-app.listen(8000,()=>{
-    console.log("app is running on",server)
+// const server = "http://localhost:8000"
+// app.listen(8000,()=>{
+//     console.log("app is running on",server)
 
-})
+// })
 
 
 
