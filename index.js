@@ -93,7 +93,7 @@ app.post("/transfer",async (req,res)=>{
 
 const port = process.env.PORT
 app.listen(port,()=>{
-    console.log("app is running on",server)
+    console.log("app is running on")
 
 })
 
