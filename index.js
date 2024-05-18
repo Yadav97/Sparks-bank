@@ -2,7 +2,6 @@ const express = require("express")
 const mongoose = require("mongoose");
 const customer = require("./models/customers")
 require("dotenv").config();
-
 // const name = "";
 let krishnacurrbal = 0;
 
