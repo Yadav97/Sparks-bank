@@ -2,7 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose");
 const customer = require("./models/customers")
 require("dotenv").config();
-console.log(process.env.SERVER)
+
 // const name = "";
 let krishnacurrbal = 0;
 
@@ -93,7 +93,7 @@ app.post("/transfer",async (req,res)=>{
 
 const port = process.env.PORT || 3000;
 app.listen(port,()=>{
-    console.log("app is running on")
+    console.log("app is running on",port)
 
 })
 
