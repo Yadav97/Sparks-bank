@@ -91,8 +91,8 @@ app.post("/transfer",async (req,res)=>{
 })
 
 
-const server = "http://localhost:8000"
-app.listen(8000,()=>{
+const port = process.env.PORT
+app.listen(port,()=>{
     console.log("app is running on",server)
 
 })
