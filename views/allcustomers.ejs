@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All customers</title>
+    
+
+</head> -->
+<%- include("layout/head")%>
+
+<body>
+    <!-- <h1>List of customers</h1> -->
+
+
+  
+
+    
+
+
+
+    
+
+<div class="relative overflow-x-auto">
+    
+      
+    
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <caption class="p-5 text-lg font-semibold text-center rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+            <h1>NAME: Krishna Yadav(Your balance)</h1>
+            <h2 class="mt-1 text-lg font-normal text-gray-500 dark:text-gray-400">
+                CURRENT BALANCE: &dollar;<%= krishnacurrbal %>
+            </h2>
+        </caption>
+        <thead class="text-md text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 rounded-s-lg">
+                   CUSTOMERS
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    EMAIL
+                </th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">
+                    CURRENT BALANCE
+                </th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">
+                    BANK TO BANK TRANSFERS
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i<allcust.length;i++ ) { 
+                if (allcust[i].name != "krishna"){ 
+            %>
+            <tr class="bg-white dark:bg-gray-800">
+
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <%= allcust[i].name %>
+                </th>
+                <td class="px-6 py-4">
+                    <%= allcust[i].email %>
+                </td>
+                <td class="px-6 py-4">
+                   &dollar; <%=allcust[i].currbal %>
+                </td>
+                <!-- <td class="px-6 py-4">
+                </td> -->
+                
+                <td class="px-6 py-4">
+                    <!-- Modal toggle -->
+                    <!-- <a href="/transfer" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Transfer To <span><%=allcust[i].name%></span></a> -->
+                    
+                    <a href="/transfer/form/<%=allcust[i]._id%>" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Transfer to <span><%=allcust[i].name%> </span></a>
+                </td>
+            </tr>
+            <%}}%>
+           
+        </tbody>
+        
+    </table>
+</div>
+
+
+
+
+
+    
+
+</body>
+</html>

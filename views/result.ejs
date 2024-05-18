@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include("layout/head");%>
+<body>
+    <!-- <h1><%=singleName %>'s previus balance<span><%=prevBal%></span></h1>
+    <h2><%=singleName %>'s current balance<span><%=total%></span></h1>
+
+    <h2>krishn balance <%=krishnacurrbal %></h2>
+    <h2>krishn previous balance <%=krishnaprevBal %></h2> -->
+
+    <div class="relative overflow-x-auto">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <caption class="p-5 text-lg font-semibold text-center rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                <h1>Transfer Details</h1>
+               
+            </caption>
+
+            <thead class="text-md text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3 rounded-s-lg">
+                        Names
+                     </th>
+                    <th scope="col" class="px-6 py-3 rounded-s-lg">
+                       Previous Amount(in &dollar;)
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Current Amount(in &dollar;)
+                    </th>
+           
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Krishna Yadav(YOUR BALANCE)
+                    </th>
+                    <td class="px-6 py-4">
+                       <%=krishnaprevBal%>
+                    </td>
+                    <td class="px-6 py-4">
+                        <%=krishnacurrbal%>
+                     </td>
+                   
+                </tr>  
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <%= singleName %>
+                    </th>
+                    <td class="px-6 py-4">
+                       <%=prevBal%>
+                    </td>
+                    <td class="px-6 py-4">
+                        <%=total%>
+                     </td>
+                   
+                </tr>  
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="flex flex-col items-center">
+
+        <a href="/" class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base" >Go home</a>
+    </div>
+
+   
+        
+
+
+</body>
+</html>
